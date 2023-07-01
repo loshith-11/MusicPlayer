@@ -4,7 +4,7 @@ import React from 'react';
 const App = () => {
   return (
     <View style={{backgroundColor:'orange',flex:1}}>
-      <Text>App</Text>
+      <Text style={{fontSize:12}}>App</Text>
     </View>
   );
 };
