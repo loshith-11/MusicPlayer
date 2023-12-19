@@ -62,8 +62,11 @@ const MusicList = () => {
   ];
   const renderItem = ({item, index}) => {
     return (
-      <View style={styles.musicContainer}>
-        <Image source={item.image} style={styles.imageStyle} />
+      <View>
+        <View style={styles.musicContainer}>
+          <Image source={item.image} style={styles.imageStyle} />
+          <Text style={styles.songText}>{item?.title}</Text>
+        </View>
       </View>
     );
   };
@@ -107,6 +110,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE_COLOR,
     marginLeft: responsiveHeight(3),
     marginTop: responsiveHeight(1),
+    flexDirection: 'row',
   },
   imageStyle: {
     height: responsiveHeight(9),
@@ -114,5 +118,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: responsiveHeight(0.5),
     marginLeft: responsiveHeight(1),
+  },
+  songText: {
+    marginVertical: 25,
+    fontSize: 22,
+    textAlign: 'center',
+    color: Colors.BLACK_COLOR,
+    paddingLeft: 55,
   },
 });
