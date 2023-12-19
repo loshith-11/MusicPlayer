@@ -1,13 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import RootStack from './src/navigation/RootStack';
 
-const App = () => {
+const test = () => {
   return (
-  <RootStack/>
+    <View>
+      <Text>test</Text>
+    </View>
   );
 };
 
-export default App;
+export default test;
 
 const styles = StyleSheet.create({});
