@@ -68,7 +68,7 @@ You've successfully run and modified your React Native App. :partying_face:
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+# Learn MoreD:\Ecom_SreeNandhaas\src\assets\images\app_logo.png
 
 To learn more about React Native, take a look at the following resources:
 
@@ -77,3 +77,4 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+![app_logo](https://github.com/loshith-11/MusicPlayer/assets/109982286/6cad2277-aee1-43f3-a6da-b144de0a29ba)
