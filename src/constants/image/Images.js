@@ -12,4 +12,11 @@ export default {
   IMAGE_EIGHT: require('../../assets/images/pexels-stas-knop-1261578.jpg'),
   IMAGE_NINE: require('../../assets/images/pexels-thibault-trillet-167491.jpg'),
   IMAGE_TEN: require('../../assets/images/pexels-vishnu-r-nair-1105666.jpg'),
+  PLAY_BUTTON:  require('../../assets/images/play.png'),
+  REWIND_BUTTON:require('../../assets/images/rewind-button.png'),
+  FORWARD_BUTTON:require('../../assets/images/fast-forward.png'),
+  PAUSE_BUTTON:require('../../assets/images/pause.png'),
+  SHUFFLE_BUTTON:require('../../assets/images/shuffle.png'),
+  BACK_ARROW:require('../../assets/images/left-arrow.png'),
+
 };
