@@ -72,6 +72,11 @@ const MusicList = () => {
       songs:Song.SONG_10
     },
   ];
+  const navigateToMusicMain = (item) => {
+    console.log('fsfd',item)
+    // Navigate to MusicMain screen and pass the selected item as a parameter
+    navigation.navigate('MusicMain', { data: item });
+  };
   const renderItem = ({item, index}) => {
     return (
       <View>
@@ -79,7 +84,7 @@ const MusicList = () => {
           <Image source={item.image} style={styles.imageStyle} />
           <Text style={styles.songText}>{item?.title}</Text>
           <TouchableOpacity
-          onPress={()=>navigation.navigate('MusicMain')}>
+          onPress={()=>navigateToMusicMain(item)}>
           <Image source={Images.PLAY_BUTTON} style={styles.playButtonImg}/>
           </TouchableOpacity>
         </View>
