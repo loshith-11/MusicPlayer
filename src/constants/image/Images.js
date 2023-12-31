@@ -18,5 +18,6 @@ export default {
   PAUSE_BUTTON:require('../../assets/images/pause.png'),
   SHUFFLE_BUTTON:require('../../assets/images/shuffle.png'),
   BACK_ARROW:require('../../assets/images/left-arrow.png'),
+  REPEAT_BUTTON:require('../../assets/images/repeat.png'),
 
 };

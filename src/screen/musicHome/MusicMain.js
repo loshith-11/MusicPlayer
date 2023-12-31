@@ -2,8 +2,9 @@ import { Image, StyleSheet, Text, View,FlatList, TouchableOpacity} from 'react-n
 import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Images,Colors } from '../../constants'
-import { responsiveHeight } from 'react-native-responsive-dimensions';
+import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import Slider from '@react-native-community/slider';
+import { Songs } from '../../musicData/MusicData';
 
 
 const MusicMain = ({ route }) => {
@@ -16,9 +17,13 @@ const MusicMain = ({ route }) => {
   }, [])
   
   const renderItem = ({item, index}) => {
-    <View style={{height:25,width:55,backgroundColor:'red'}}>
-
+    console.log('item>>',item);
+    return(
+    <View style={{height:responsiveHeight(45),
+    width:responsiveWidth(92),marginLeft:responsiveHeight(2),marginRight:responsiveHeight(2)}}>
+<Image source={item.image} style={{height:responsiveHeight(45),width:'100%', borderRadius:15}}/>
     </View>
+    )
   }
 
   return (
@@ -28,13 +33,17 @@ const MusicMain = ({ route }) => {
     onPress={()=>navigation.goBack()}>
      <Image source={Images.BACK_ARROW} style={styles.backButton}/>
      </TouchableOpacity>
-     {/* <FlatList
-        data={data}
+    
+      <View>
+      {/* <Image source={data?.image} style={{height:responsiveHeight(45),width:'100%', borderRadius:15}}/> */}
+       <FlatList
+        data={Songs}
+        horizontal
+      pagingEnabled
+      showsHorizontalScrollIndicator={false}
         renderItem={renderItem}
         keyExtractor={item =>item?.id }
-      /> */}
-      <View style={styles.bannerView}>
-      <Image source={data?.image} style={{height:responsiveHeight(45),width:'100%', borderRadius:15}}/>
+      />
       </View>
       <Text style={styles.textStyle}>{data?.title}</Text>
       <View style={{marginTop:25}}>
@@ -45,7 +54,56 @@ const MusicMain = ({ route }) => {
       />
       </View>
       
+<View style={{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  marginTop:responsiveHeight(5),
+  marginHorizontal:responsiveHeight(5)
+}}>
+<TouchableOpacity>
+  <Image
+    source={Images.REWIND_BUTTON}
+    style={{tintColor:Colors.WHITE_COLOR,height:35,
+    width:35}}
+  />
+</TouchableOpacity>
+<TouchableOpacity>
+  <Image
+    source={Images.PLAY_BUTTON}
+    style={{tintColor:Colors.WHITE_COLOR,height:35,
+    width:35}}
+  />
+</TouchableOpacity>
+<TouchableOpacity>
+  <Image
+    source={Images.FORWARD_BUTTON}
+    style={{tintColor:Colors.WHITE_COLOR,height:35,
+    width:35}}
+  />
+</TouchableOpacity>
 
+</View>
+<View style={{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  marginTop:responsiveHeight(5),
+  marginHorizontal:responsiveHeight(10)
+}}>
+<TouchableOpacity>
+  <Image
+    source={Images.SHUFFLE_BUTTON}
+    style={{tintColor:Colors.WHITE_COLOR,height:35,
+    width:35}}
+  />
+</TouchableOpacity>
+<TouchableOpacity>
+  <Image
+    source={Images.REPEAT_BUTTON}
+    style={{tintColor:Colors.WHITE_COLOR,height:35,
+    width:35}}
+  />
+</TouchableOpacity>
+</View>
     </View>
   )
 }
